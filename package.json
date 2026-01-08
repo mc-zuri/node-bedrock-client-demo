@@ -1,0 +1,33 @@
+{
+    "type": "module",
+    "workspaces": [
+        "examples/*",
+        "../npm/*"
+    ],
+    "dependencies": {
+        "@nxg-org/mineflayer-static-statemachine": "^0.3.5",
+        "bedrock-protocol": "^3.52.0",
+        "compression": "^1.8.1",
+        "csbinary": "^2.1.4",
+        "express": "^5.2.1",
+        "inquirer": "^13.1.0",
+        "minecraft-bedrock-server": "^1.5.1",
+        "minecraft-data": "github:mc-zuri/node-minecraft-data#bedrock",
+        "mineflayer": "github:mc-zuri/node-mineflayer#bedrock",
+        "mineflayer-pathfinder": "^2.4.5",
+        "prismarine-chunk": "github:mc-zuri/node-prismarine-chunk#bedrock",
+        "prismarine-physics": "github:mc-zuri/node-prismarine-physics#bedrock",
+        "prismarine-registry": "github:mc-zuri/node-prismarine-registry#bedrock",
+        "prismarine-viewer": "github:mc-zuri/node-prismarine-viewer#bedrock",
+        "prismarine-world": "^3.6.3",
+        "vec3": "^0.1.10"
+    },
+    "scripts": {
+        "start": "node --experimental-strip-types src/main.ts",
+        "state-machine-farmer": "npm run start --workspace=@mc-zuri-org/state-machine-farmer"
+    },
+    "devDependencies": {
+        "@types/compression": "^1.8.1",
+        "@types/express": "^5.0.6"
+    }
+}
