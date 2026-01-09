@@ -9,7 +9,7 @@ Demo project showcasing [Mineflayer](https://github.com/PrismarineJS/mineflayer)
 ```
 git clone https://github.com/mc-zuri/node-bedrock-client-demo.git
 npm i
-npm run state-machine-farmer
+npm run start
 ```
 
 or start new project

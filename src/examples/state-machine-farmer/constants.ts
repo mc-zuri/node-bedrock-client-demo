@@ -1,4 +1,4 @@
-export const SEARCH_RADIUS = 32;
+export const SEARCH_RADIUS = 128;
 export const DEPOSIT_THRESHOLD = 128;
 export const MAX_CROP_GROWTH = 7;
 export const MIN_TREE_SPACING = 5;

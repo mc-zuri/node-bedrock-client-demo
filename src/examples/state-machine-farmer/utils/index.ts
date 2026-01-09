@@ -33,13 +33,22 @@ export function findMatureCrop(bot: Bot): Vec3 | null {
     const found = bot.findBlocks({
       matching: blockType.id,
       maxDistance: SEARCH_RADIUS,
-      count: 1,
+      count: 64,
     });
+
+    if (found.length > 0) {
+      bot.logger.debug(`[findMatureCrop] Found ${found.length} ${cropName} blocks`);
+    }
 
     for (const pos of found) {
       const block = bot.blockAt(pos);
       // @ts-ignore - Bedrock specific property
-      if (block && block._properties?.growth === MAX_CROP_GROWTH) {
+      const growth = block?._properties?.growth;
+      if (growth !== undefined && found.indexOf(pos) === 0) {
+        bot.logger.debug(`[findMatureCrop] First ${cropName} growth=${growth} (need ${MAX_CROP_GROWTH})`);
+      }
+      if (block && growth === MAX_CROP_GROWTH) {
+        bot.logger.debug(`[findMatureCrop] Found mature ${cropName} at ${pos}`);
         return pos;
       }
     }
