@@ -7,6 +7,7 @@
     "dependencies": {
         "@nxg-org/mineflayer-static-statemachine": "^0.3.5",
         "bedrock-protocol": "^3.52.0",
+        "canvas": "^3.2.0",
         "compression": "^1.8.1",
         "csbinary": "^2.1.4",
         "express": "^5.2.1",
